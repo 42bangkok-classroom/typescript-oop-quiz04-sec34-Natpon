@@ -18,11 +18,7 @@ export class MissionsService {
   }
 
   getSummary() {
-    return this.missions.reduce((summary, mission) => {
-      const status = mission.status;
-      summary[status] = (summary[status] || 0) + 1;
-      return summary;
-    }{} as Record<string, number>);
+    
   }
   findOne(id: number) {
     return `This action returns a #${id} mission`;
